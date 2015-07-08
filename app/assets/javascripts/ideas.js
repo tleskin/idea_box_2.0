@@ -20,6 +20,9 @@ $(document).ready(function(){
                     + "<h6 class='white-text text-lighten-4'>"
                     + idea.quality
                     + "</h6><br><a class='delete' href='#'>Delete</a>"
+                    + "<a class='edit' href='/ideas/"
+                    +  idea.id
+                    + "/edit'>Edit</a>"
                     + "</div></div></div></div></div>");
 
 
@@ -28,13 +31,15 @@ $(document).ready(function(){
      $(".title").val("");
      $(".body").val("");
      $(".delete").on("click", deleteIdea);
+     $(".edit").on("click", editIdea);
    }).fail(function() {
-       alert('Not a good idea, try again!')
+       alert('Error!')
        document.getElementById("main-button").disabled = false;
      });
  });
 
  $(".delete").on("click", deleteIdea);
+ $(".edit").on("click", editIdea);
 
 });
 
@@ -53,3 +58,10 @@ $(document).ready(function(){
      }
    });
  };
+
+ function editIdea() {
+   $.ajax({
+     type: "PATCH"
+
+   })
+ }

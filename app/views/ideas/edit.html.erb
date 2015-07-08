@@ -1,0 +1,28 @@
+<h1>Not satisfied? Edit it!</h1>
+
+<%= form_for @idea do |f| %>
+
+<div class="center">
+  <div class="row">
+      <form class="col s7 offset-s2 main-col">
+        <div class='card teal darken-1 z-depth-3 display-cards'>
+        <div class="row">
+          <div class="input-field col s6">
+
+  <%= f.text_field :title %>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s6">
+
+  <%= f.text_field :body %>
+  <%= f.submit "Save", class: "btn  button"%>
+</div>
+</div>
+</div>
+</div>
+<% end %>
+</div>
+</div>
+</div>
+</div>
